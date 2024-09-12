@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dashboard</title>
+    <!-- Bootstrap CSS -->
+    <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" rel="stylesheet">
+    <style>
+        body {
+            display: flex;
+            min-height: 100vh;
+            flex-direction: column;
+        }
+        .sidebar {
+            height: 100vh;
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 200px;
+            background-color: #343a40;
+            padding-top: 20px;
+        }
+        .sidebar a {
+            padding: 10px 15px;
+            text-align: left;
+            font-size: 18px;
+            color: #ffffff;
+            display: block;
+        }
+        .sidebar a:hover {
+            background-color: #495057;
+            text-decoration: none;
+        }
+        .content {
+            margin-left: 200px;
+            padding: 20px;
+        }
+    </style>
+</head>
+<body>
+    <!-- Sidebar -->
+    <div class="sidebar">
+        <a href="#dashboard">Dashboard</a>
+        <a href="#models">Models</a>
+        <a href="#urls">URLs</a>
+        <a href="#serializers">Serializers</a>
+    </div>
+
+    <!-- Main Content -->
+    <div class="content">
+        <h1>Dashboard</h1>
+        <p>Welcome to the dashboard! Use the menu to navigate between the different sections.</p>
+
+        <!-- Form Section -->
+        <div id="form-section">
+            <h2>Dynamic Form</h2>
+            <button id="add-btn" class="btn btn-primary mb-3">Add Line</button>
+
+            <form id="dynamic-form">
+                <!-- Dynamic rows will be added here -->
+                <div class="form-row mb-2">
+                    <div class="col">
+                        <input type="text" class="form-control" placeholder="Text input">
+                    </div>
+                    <div class="col">
+                        <select class="form-control">
+                            <option>Select Option 1</option>
+                            <option>Option 1</option>
+                            <option>Option 2</option>
+                        </select>
+                    </div>
+                    <div class="col">
+                        <select class="form-control">
+                            <option>Select Option 2</option>
+                            <option>Option A</option>
+                            <option>Option B</option>
+                        </select>
+                    </div>
+                </div>
+            </form>
+        </div>
+
+    </div>
+
+    <!-- Bootstrap JS and dependencies -->
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.3/dist/umd/popper.min.js"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+
+    <script>
+        // Add event listener to the "Add Line" button
+        document.getElementById('add-btn').addEventListener('click', function() {
+            // Create a new form row with input and two selects
+            const newRow = document.createElement('div');
+            newRow.className = 'form-row mb-2';
+            
+            newRow.innerHTML = `
+                <div class="col">
+                    <input type="text" class="form-control" placeholder="Text input">
+                </div>
+                <div class="col">
+                    <select class="form-control">
+                        <option>Select Option 1</option>
+                        <option>Option 1</option>
+                        <option>Option 2</option>
+                    </select>
+                </div>
+                <div class="col">
+                    <select class="form-control">
+                        <option>Select Option 2</option>
+                        <option>Option A</option>
+                        <option>Option B</option>
+                    </select>
+                </div>
+            `;
+            // Append the new row to the form
+            document.getElementById('dynamic-form').appendChild(newRow);
+        });
+    </script>
+</body>
+</html>

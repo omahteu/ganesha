@@ -1,0 +1,11 @@
+{
+    "nome": [
+        "varchar", "50", "null"
+    ],
+    "idade": [
+        "inteiger", "4", "null"
+    ],
+    "nascimento": [
+        "date", "brasil", "null"
+    ]
+}

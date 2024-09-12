@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dashboard</title>
+    <!-- Bootstrap CSS -->
+    <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" rel="stylesheet">
+    <style>
+        body {
+            display: flex;
+            min-height: 100vh;
+            flex-direction: column;
+        }
+        .sidebar {
+            height: 100vh;
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 200px;
+            background-color: #343a40;
+            padding-top: 20px;
+        }
+        .sidebar a {
+            padding: 10px 15px;
+            text-align: left;
+            font-size: 18px;
+            color: #ffffff;
+            display: block;
+        }
+        .sidebar a:hover {
+            background-color: #495057;
+            text-decoration: none;
+        }
+        .content {
+            margin-left: 200px;
+            padding: 20px;
+        }
+    </style>
+</head>
+<body>
+    <!-- Sidebar -->
+    <div class="sidebar">
+        <a href="#dashboard">Dashboard</a>
+        <a href="./models.html">Models</a>
+        <a href="#urls">URLs</a>
+        <a href="#serializers">Serializers</a>
+    </div>
+
+    <!-- Main Content -->
+    <div class="content">
+        <h1>Dashboard</h1>
+        <p>Welcome to the dashboard! Use the menu to navigate between the different sections.</p>
+
+        <!-- Section placeholders -->
+        <div id="dashboard">
+            <h2>Dashboard Section</h2>
+            <p>This is where the dashboard content will go.</p>
+        </div>
+
+        <div id="models" style="margin-top: 50px;">
+            <h2>Models Section</h2>
+            <p>This is where the models content will go.</p>
+        </div>
+
+        <div id="urls" style="margin-top: 50px;">
+            <h2>URLs Section</h2>
+            <p>This is where the URLs content will go.</p>
+        </div>
+
+        <div id="serializers" style="margin-top: 50px;">
+            <h2>Serializers Section</h2>
+            <p>This is where the serializers content will go.</p>
+        </div>
+    </div>
+
+    <!-- Bootstrap JS and dependencies -->
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.3/dist/umd/popper.min.js"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+</body>
+</html>
